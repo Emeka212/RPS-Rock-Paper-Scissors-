@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'route/route.dart' as route; // Importing our route.dart file to the main.dart file
+import 'package:rps/routes/route.dart' as route;
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-
   const MyApp({Key? key}) : super(key: key);
 
   @override

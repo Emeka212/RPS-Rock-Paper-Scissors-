@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rps/component/component.dart';
 import 'package:rps/variable/all_color.dart';
+import 'package:rps/components/component.dart';
 
 class AboutPage extends StatelessWidget {
-
   const AboutPage({Key? key}) : super(key: key);
 
   @override
@@ -21,7 +20,8 @@ class AboutPage extends StatelessWidget {
               ),
             ),
           ),
-          const Text('Emeka Michael (MC-STEPHEN)', 
+          const Text(
+            'Emeka Michael (MC-STEPHEN)',
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.0,
@@ -31,7 +31,8 @@ class AboutPage extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(25.0, 25.0, 25.0, 20.0),
-            child: const Text('Am a full-stack web and mobile (flutter) developer, i create website and apps for small and large businesses, do u have a project in mind, if so pls do feel free to contact me using any of the options below.', 
+            child: const Text(
+              'Am a full-stack web and mobile (flutter) developer, i create website and apps for small and large businesses, do u have a project in mind, if so pls do feel free to contact me using any of the options below.',
               style: TextStyle(
                 fontStyle: FontStyle.italic,
                 color: Colors.white70,
@@ -50,7 +51,8 @@ class AboutPage extends StatelessWidget {
               ],
             ),
           ),
-          const Text('Other Apps',
+          const Text(
+            'Other Apps',
             style: TextStyle(
               color: Colors.white,
               fontFamily: 'Nunito',

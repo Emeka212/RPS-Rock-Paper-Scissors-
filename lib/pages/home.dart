@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:rps/component/component.dart';
 import 'package:rps/variable/actions.dart';
-import '../route/route.dart' as route;
+import 'package:rps/components/component.dart';
+import 'package:rps/routes/route.dart' as route;
 
 class HomePage extends StatelessWidget {
-
   const HomePage({Key? key}) : super(key: key);
-  
+
   @override
   Widget build(BuildContext context) {
     //======================================
-    navigator(value){
+    navigator(value) {
       myScore = 0;
-      if(pick == true){
+      if (pick == true) {
         nxtSection();
       }
-      value == 'aboutPage' ? Navigator.pushNamed(context, route.aboutPage) :
-      value == 'normalLevelPage' ? Navigator.pushNamed(context, route.normalLevelPage) :
-      value == 'advanceLevelPage' ? Navigator.pushNamed(context, route.advanceLevelPage) : null;
+      value == 'aboutPage'
+          ? Navigator.pushNamed(context, route.aboutPage)
+          : value == 'normalLevelPage'
+              ? Navigator.pushNamed(context, route.normalLevelPage)
+              : value == 'advanceLevelPage'
+                  ? Navigator.pushNamed(context, route.advanceLevelPage)
+                  : null;
     }
+
     //======================================
     return Scaffold(
       backgroundColor: const Color(0xff182343),
@@ -56,8 +60,12 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                     child: Column(
                       children: [
-                        MyHomeBtn(onChanged: (value) => navigator(value)).myHomeBtn('Normal Level', const Color(0xff4865f4), const Color(0xff2543bd)),
-                        MyHomeBtn(onChanged: (value) => navigator(value)).myHomeBtn('Advance Level', const Color(0xffdc2e4e), const Color(0xff9e1735)),
+                        MyHomeBtn(onChanged: (value) => navigator(value))
+                            .myHomeBtn('Normal Level', const Color(0xff4865f4),
+                                const Color(0xff2543bd)),
+                        MyHomeBtn(onChanged: (value) => navigator(value))
+                            .myHomeBtn('Advance Level', const Color(0xffdc2e4e),
+                                const Color(0xff9e1735)),
                       ],
                     ),
                   ),

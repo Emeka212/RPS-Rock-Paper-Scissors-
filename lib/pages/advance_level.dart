@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:rps/variable/actions.dart';
 import 'package:rps/variable/all_color.dart';
-import '../component/component.dart';
+import 'package:rps/components/component.dart';
 
 class AdvanceLevelPage extends StatefulWidget {
-
   const AdvanceLevelPage({Key? key}) : super(key: key);
-
   @override
-  _AdvanceLevelPage createState() => _AdvanceLevelPage();
+  State<AdvanceLevelPage> createState() => _AdvanceLevelPage();
 }
 
 class _AdvanceLevelPage extends State<AdvanceLevelPage> {
@@ -35,7 +33,8 @@ class _AdvanceLevelPage extends State<AdvanceLevelPage> {
                 if (pick)
                   Expanded(
                     child: Container(
-                      padding: const EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 20.0),
+                      padding:
+                          const EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 20.0),
                       child: Column(
                         children: [
                           Expanded(
@@ -114,26 +113,45 @@ class _AdvanceLevelPage extends State<AdvanceLevelPage> {
                           Expanded(
                             child: Container(
                               alignment: Alignment.bottomCenter,
-                              child: RPS(onChanged: (value) { 
-                                      user(value, 'advanceLevel');
-                                      setState(() => nxtSection()); 
-                                    },).rps(GameColor().scissorColor, GameColor().scissorShadowColor, const AssetImage('assets/img/icon-scissors.png')),
+                              child: RPS(
+                                onChanged: (value) {
+                                  user(value, 'advanceLevel');
+                                  setState(() => nxtSection());
+                                },
+                              ).rps(
+                                  GameColor().scissorColor,
+                                  GameColor().scissorShadowColor,
+                                  const AssetImage(
+                                      'assets/img/icon-scissors.png')),
                             ),
                           ),
                           Expanded(
                             child: Container(
                               alignment: Alignment.topCenter,
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  RPS(onChanged: (value) { 
+                                  RPS(
+                                    onChanged: (value) {
                                       user(value, 'advanceLevel');
-                                      setState(() => nxtSection()); 
-                                    },).rps(GameColor().spockColor, GameColor().spockShadowColor, const AssetImage('assets/img/icon-spock.png')),
-                                  RPS(onChanged: (value) { 
+                                      setState(() => nxtSection());
+                                    },
+                                  ).rps(
+                                      GameColor().spockColor,
+                                      GameColor().spockShadowColor,
+                                      const AssetImage(
+                                          'assets/img/icon-spock.png')),
+                                  RPS(
+                                    onChanged: (value) {
                                       user(value, 'advanceLevel');
-                                      setState(() => nxtSection()); 
-                                    },).rps(GameColor().paperColor, GameColor().paperShadowColor, const AssetImage('assets/img/icon-paper.png')),
+                                      setState(() => nxtSection());
+                                    },
+                                  ).rps(
+                                      GameColor().paperColor,
+                                      GameColor().paperShadowColor,
+                                      const AssetImage(
+                                          'assets/img/icon-paper.png')),
                                 ],
                               ),
                             ),
@@ -142,16 +160,29 @@ class _AdvanceLevelPage extends State<AdvanceLevelPage> {
                             child: Container(
                               alignment: Alignment.topCenter,
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  RPS(onChanged: (value) { 
+                                  RPS(
+                                    onChanged: (value) {
                                       user(value, 'advanceLevel');
-                                      setState(() => nxtSection()); 
-                                    },).rps(GameColor().lizardColor, GameColor().lizardShadowColor, const AssetImage('assets/img/icon-lizard.png')),
-                                  RPS(onChanged: (value) { 
+                                      setState(() => nxtSection());
+                                    },
+                                  ).rps(
+                                      GameColor().lizardColor,
+                                      GameColor().lizardShadowColor,
+                                      const AssetImage(
+                                          'assets/img/icon-lizard.png')),
+                                  RPS(
+                                    onChanged: (value) {
                                       user(value, 'advanceLevel');
-                                      setState(() => nxtSection()); 
-                                    },).rps(GameColor().rockColor, GameColor().rockShadowColor, const AssetImage('assets/img/icon-rock.png')),
+                                      setState(() => nxtSection());
+                                    },
+                                  ).rps(
+                                      GameColor().rockColor,
+                                      GameColor().rockShadowColor,
+                                      const AssetImage(
+                                          'assets/img/icon-rock.png')),
                                 ],
                               ),
                             ),

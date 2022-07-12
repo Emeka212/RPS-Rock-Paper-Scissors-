@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:rps/variable/actions.dart';
 import 'package:rps/variable/all_color.dart';
-import '../component/component.dart';
+import 'package:rps/components/component.dart';
 
 class NormalLevelPage extends StatefulWidget {
-
   const NormalLevelPage({Key? key}) : super(key: key);
-
   @override
-  _NormalLevelPageState createState() => _NormalLevelPageState();
+  State<NormalLevelPage> createState() => _NormalLevelPageState();
 }
 
 class _NormalLevelPageState extends State<NormalLevelPage> {
@@ -33,7 +31,8 @@ class _NormalLevelPageState extends State<NormalLevelPage> {
                 if (pick)
                   Expanded(
                     child: Container(
-                      padding: const EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 20.0),
+                      padding:
+                          const EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 20.0),
                       child: Column(
                         children: [
                           Expanded(
@@ -113,14 +112,26 @@ class _NormalLevelPageState extends State<NormalLevelPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                RPS(onChanged: (value) {
+                                RPS(
+                                  onChanged: (value) {
                                     user(value, 'normalLevel');
                                     setState(() => nxtSection());
-                                  },).rps(const Color(0xff4865f4), const Color(0xff2543bd), const AssetImage('assets/img/icon-paper.png')),
-                                RPS(onChanged: (value) {
+                                  },
+                                ).rps(
+                                    const Color(0xff4865f4),
+                                    const Color(0xff2543bd),
+                                    const AssetImage(
+                                        'assets/img/icon-paper.png')),
+                                RPS(
+                                  onChanged: (value) {
                                     user(value, 'normalLevel');
                                     setState(() => nxtSection());
-                                  },).rps(const Color(0xffec9e0e), const Color(0xffc96d1a), const AssetImage('assets/img/icon-scissors.png')),
+                                  },
+                                ).rps(
+                                    const Color(0xffec9e0e),
+                                    const Color(0xffc96d1a),
+                                    const AssetImage(
+                                        'assets/img/icon-scissors.png')),
                               ],
                             ),
                           ),
@@ -128,10 +139,15 @@ class _NormalLevelPageState extends State<NormalLevelPage> {
                             child: Container(
                               alignment: Alignment.center,
                               width: double.infinity,
-                              child: RPS(onChanged: (value) {
+                              child: RPS(
+                                onChanged: (value) {
                                   user(value, 'normalLevel');
                                   setState(() => nxtSection());
-                                },).rps(const Color(0xffdc2e4e), const Color(0xff9e1735), const AssetImage('assets/img/icon-rock.png')),
+                                },
+                              ).rps(
+                                  const Color(0xffdc2e4e),
+                                  const Color(0xff9e1735),
+                                  const AssetImage('assets/img/icon-rock.png')),
                             ),
                           ),
                         ],

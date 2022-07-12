@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:rps/variable/all_color.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 //======================================================================
 // THIS CODE HANDLE THE BTN THAT LEAD THE USER TO ANY OF THE BOTH PAGES
 //======================================================================
-class MyHomeBtn extends StatelessWidget{
-
+class MyHomeBtn extends StatelessWidget {
   final ValueChanged onChanged;
   const MyHomeBtn({Key? key, required this.onChanged}) : super(key: key);
 
@@ -17,8 +15,9 @@ class MyHomeBtn extends StatelessWidget{
         height: 50.0,
         width: double.infinity,
         child: TextButton(
-          onPressed: () => onChanged(btnValue == 'Normal Level' ? "normalLevelPage" : "advanceLevelPage"),
-          child: Text(btnValue),
+          onPressed: () => onChanged(btnValue == 'Normal Level'
+              ? "normalLevelPage"
+              : "advanceLevelPage"),
           style: TextButton.styleFrom(
             primary: Colors.white,
             backgroundColor: btnColor,
@@ -29,6 +28,7 @@ class MyHomeBtn extends StatelessWidget{
               borderRadius: BorderRadius.all(Radius.circular(5)),
             ),
           ),
+          child: Text(btnValue),
         ),
       ),
     );
@@ -38,8 +38,6 @@ class MyHomeBtn extends StatelessWidget{
   noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }
 
-
-
 //==================================================================
 // THIS CODE HANDLE THE WAY THE TXT DISPLAY ON THE SCOPRE CONNTAINER
 //==================================================================
@@ -48,8 +46,9 @@ class GameName {
     return Text(
       txtName,
       style: const TextStyle(
-          color: Colors.white, fontSize: 20.0, 
-          fontWeight: FontWeight.bold,
+        color: Colors.white,
+        fontSize: 20.0,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
@@ -59,7 +58,8 @@ class GameName {
 // THIS CODE HANDLE THE SCORE CONTAINER FOR BOTH PAGES
 //==========================================================
 class ScoreCon {
-  Widget scoreCon(var score, var arg1, var arg2, var arg3, [var arg4, var arg5]) {
+  Widget scoreCon(var score, var arg1, var arg2, var arg3,
+      [var arg4, var arg5]) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(10.0),
@@ -119,7 +119,6 @@ class ScoreCon {
 // THIS CODE HANDLE THE RULE BTN FOR EACH PAGE/GAME
 //==========================================================
 class RuleBtn extends StatelessWidget {
-
   final ValueChanged<bool> onChanged;
   const RuleBtn({Key? key, required this.onChanged}) : super(key: key);
 
@@ -147,7 +146,6 @@ class RuleBtn extends StatelessWidget {
 // THE CODE HANDLE THE LARGE RULE CONTAINER THAT DISPLAY ON BOTH PAGE WHEN THE RULE BTN HAVE BEEN CLICKED
 //=======================================================================================================
 class RuleCon extends StatelessWidget {
-
   final ValueChanged<bool> onChanged;
   const RuleCon({Key? key, required this.onChanged}) : super(key: key);
 
@@ -199,8 +197,8 @@ class RuleCon extends StatelessWidget {
 //========================================================================
 // THIS CODE HANDLE THE LARGE BOX SHADOW U SEE ON A CARD THAT WON THE GAME
 //========================================================================
-class Shadow{
-  List<BoxShadow> boxShadow(){
+class Shadow {
+  List<BoxShadow> boxShadow() {
     return [
       BoxShadow(
         color: GameColor().winningShadowColor3,
@@ -222,17 +220,21 @@ class Shadow{
 // THIS CODE HANDLE THE CARD U ARE SEEING E.G (ROCK, PAPER, SCISSORS, E.T.C)
 //==========================================================================
 class RPS extends StatelessWidget {
-
   final ValueChanged onChanged;
   const RPS({Key? key, required this.onChanged}) : super(key: key);
 
   Widget rps(final fColor, final sColor, final img, [final boxShadow]) {
-    var whatIPicked = fColor == GameColor().paperColor ? 'paper'
-                    : fColor == GameColor().scissorColor ? 'scissors'
-                    : fColor == GameColor().rockColor ? 'rock'
-                    : fColor == GameColor().lizardColor ? 'lizard'
-                    : fColor == GameColor().spockColor ? 'spock'
-                    : null;
+    var whatIPicked = fColor == GameColor().paperColor
+        ? 'paper'
+        : fColor == GameColor().scissorColor
+            ? 'scissors'
+            : fColor == GameColor().rockColor
+                ? 'rock'
+                : fColor == GameColor().lizardColor
+                    ? 'lizard'
+                    : fColor == GameColor().spockColor
+                        ? 'spock'
+                        : null;
 
     return GestureDetector(
       onTap: () => onChanged(whatIPicked),
@@ -281,7 +283,6 @@ class RPS extends StatelessWidget {
 // THIS CODE HANDLE THE PLAY AGAIN BUTTON AFTER A USER HAVE PICK A CARD
 //======================================================================
 class PlayAgainBtn extends StatelessWidget {
-
   final ValueChanged<bool> onChanged;
   const PlayAgainBtn({Key? key, required this.onChanged}) : super(key: key);
 
@@ -313,14 +314,14 @@ class PlayAgainBtn extends StatelessWidget {
   }
 }
 
-
 //==================================================================
 // THIS CODE HANDLE THE SOCIAL ICON OPTIONS TO CONATCT THE DEVELOPER
 //==================================================================
 const String myNum = '+2349026560079';
 const String myMail = 'stephenugo939@gmail.com';
 const String subject = 'ROCK, PAPER AND SCISSORS GAME APP';
-const String body = 'I love your mobile game and i will like to give some feedbacks, /n My name is: '; 
+const String body =
+    'I love your mobile game and i will like to give some feedbacks, /n My name is: ';
 const String myPortfolio = 'https://mc-stephen.000webhostapp.com';
 const String myFacebookLink = 'https://facebook.com/ejima';
 
@@ -338,11 +339,11 @@ const String myFacebookLink = 'https://facebook.com/ejima';
 //   }
 // }
 
-class SociaIcon{
-  Widget socialIcon(iconName, iconDetails){
+class SociaIcon {
+  Widget socialIcon(iconName, iconDetails) {
     return IconButton(
-      // onPressed: () => Util._launchURL(iconDetails), 
-      onPressed: (){},
+      // onPressed: () => Util._launchURL(iconDetails),
+      onPressed: () {},
       splashColor: Colors.pinkAccent,
       icon: Icon(
         iconName,
